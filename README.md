@@ -22,5 +22,26 @@ Environment:
 - Google Colab
 - Jupyter Notebook
 
+🚀 Main steps and strategies:
 
+- Collect data about cities (latitude and longitude) by web scraping and create a DataFrame:
+  Python code:
+   for city in cities:
+    url = f"https://www.wikipedia.org/wiki/{city}"
+    headers = {'User-Agent': 'Chrome/134.0.0.0'}
+
+    response = requests.get(url, headers=headers)
+    city_soup = BeautifulSoup(response.content, 'html.parser')
+    city_latitude = city_soup.find(class_="latitude").get_text()
+    city_longitude = city_soup.find(class_="longitude").get_text()
+    country = city_soup.find(class_="infobox-data").get_text()
+
+   city_data.append({"city": city,
+                    "country": country,
+                    "latitude": parse(city_latitude), # latitude in decimal format
+                    "longitude": parse(city_longitude), # longitude in decimal format
+                    })
+ cities_df = pd.DataFrame(city_data)
+
+- 
 
