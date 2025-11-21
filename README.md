@@ -50,7 +50,7 @@ Environment:
   Python code:
 
 
-- Finding weather infos for the next 5 days:
+- Finding weather infos for the next 5 days, using API from OpenWeatherMap:
 
   Python code for 'Berlin':
 
@@ -67,4 +67,11 @@ Environment:
 
   url = "https://api.openweathermap.org/data/2.5/forecast"
   response = requests.get(url, params=params)
+
+- Selecting the data about the weather which are relevant for e-scooters use: temperature, wind, rain.
+
+- Finding Flights' infos
+
+- Creating DataFrames with weather and flights infos and push to SQL
+
 
