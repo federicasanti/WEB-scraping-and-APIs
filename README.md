@@ -25,8 +25,10 @@ Environment:
 🚀 Main steps and strategies:
 
 - Collect data about cities (latitude and longitude) by web scraping and create a DataFrame:
+
   Python code:
-   for city in cities:
+
+  for city in cities:
     url = f"https://www.wikipedia.org/wiki/{city}"
     headers = {'User-Agent': 'Chrome/134.0.0.0'}
 
@@ -44,11 +46,14 @@ Environment:
  cities_df = pd.DataFrame(city_data)
 
 - Push this Data to SQL:
+
   Python code:
 
 
 - Finding Weather infos for the next 5 days:
+
   Python code for 'Berlin':
+
     latitude = cities_df[cities_df['city'] == 'Berlin']['latitude'].values[0]
     longitude = cities_df[cities_df['city'] == 'Berlin']['longitude'].values[0]
     API_key = 'write_yor_API_key'
