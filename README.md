@@ -1,6 +1,7 @@
 # WEB-scraping-and-APIs
 
 🎯 Project Overview
+
 The e-scooter-sharing startup Gans aspires to operate in the most populous cities all around the world. Scooter movements are strongly influenced by weather conditions and arrivals of people in close-by airports. 
 The aim of the project was to collect weather data in order to help the startup predict the scooters' movements and flights' information.
 
