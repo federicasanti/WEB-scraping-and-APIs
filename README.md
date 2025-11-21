@@ -50,7 +50,7 @@ Environment:
   Python code:
 
 
-- Finding Weather infos for the next 5 days:
+- Finding weather infos for the next 5 days:
 
   Python code for 'Berlin':
 
