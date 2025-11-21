@@ -43,5 +43,23 @@ Environment:
                     })
  cities_df = pd.DataFrame(city_data)
 
-- 
+- Push this Data to SQL:
+  Python code:
+
+
+- Finding Weather infos for the next 5 days:
+  Python code for 'Berlin':
+    latitude = cities_df[cities_df['city'] == 'Berlin']['latitude'].values[0]
+    longitude = cities_df[cities_df['city'] == 'Berlin']['longitude'].values[0]
+    API_key = 'write_yor_API_key'
+  params = {
+     "lat": latitude,
+     "lon": longitude,
+     "appid": API_key,
+     "units": "metric",
+     "cnt": 40
+     }
+
+  url = "https://api.openweathermap.org/data/2.5/forecast"
+  response = requests.get(url, params=params)
 
