@@ -45,10 +45,7 @@ Environment:
                     })
  cities_df = pd.DataFrame(city_data)
 
-- Push this Data to SQL:
-
-  Python code:
-
+- Push this Data to SQL
 
 - Finding weather infos for the next 5 days, using API from OpenWeatherMap:
 
